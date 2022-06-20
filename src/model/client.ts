@@ -39,14 +39,14 @@ export class UltimateFeedClient {
         );
     }
 
-    async deleteActivity(foreign_id: string) {
+    async deleteActivity(foreignId: string) {
         return this.axiosInstance.delete(
-            `/api/activity/${foreign_id}`,
+            `/api/activity/${foreignId}`,
         );
     }
-    async updateActivity(foreign_id: string, request: IUFActivityPayload) {
+    async updateActivity(foreignId: string, request: IUFActivityPayload) {
         return this.axiosInstance.put(
-            `/api/activity/${foreign_id}`,
+            `/api/activity/${foreignId}`,
             request
         );
     }
@@ -57,9 +57,9 @@ export class UltimateFeedClient {
         );
         return response;
     }
-    async removeEngagement(foreign_id: string) {
+    async removeEngagement(foreignId: string) {
         const response = await this.axiosInstance.delete(
-            `/api/engagement/${foreign_id}`,
+            `/api/engagement/${foreignId}`,
         );
         return response;
     }
